@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.checkerframework' version '0.6.20'
+}
+
+apply plugin: 'java'
+sourceCompatibility = 17
+version = '1.0.0'
+compileJava.options.encoding = 'UTF-8'
+
+apply plugin: 'org.checkerframework'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDirs = []
+        }
+    }
+}
