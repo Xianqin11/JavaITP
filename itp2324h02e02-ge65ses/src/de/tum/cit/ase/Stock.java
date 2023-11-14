@@ -51,16 +51,12 @@ public class Stock {
 			//var stockQuant = 0;
 			var stockQuant = stockIngredient.getQuantity();
 
-			if (stockQuant > 0) {
-				// If quantity is greater than 0,
-				// decrement it and return the updated quantity
+			if (stockQuant < 1) {
 				// TODO: Uncomment the following once you have implemented StockIngredient
-				stockIngredient.setQuantity(stockQuant - 1);
-				return stockIngredient.getQuantity();
-			} else {
-				// If quantity is already 0, return -1
-				return 1; //??The method take() of the class Stock should return 0 but returned 1
+				return -1;
 			}
+			stockIngredient.setQuantity(stockQuant - 1);
+			return stockIngredient.getQuantity();
 		}
 			// If the operation cannot be completed
 			return -1;
